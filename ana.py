@@ -89,7 +89,7 @@ for column in cur_prod:
         data = dt_ana[column]
     else:
         data = dt_ana[column].diff(d).dropna()
-    save_dir = os.path.join(acf_pacf_out, column + '(diff ' + str(d) + ').png')
+    save_dir = os.path.join(acf_pacf_out, column + ' (diff ' + str(d) + ').png')
     plot_acf_pacf(data, True, save_dir)
     plt.close()
 
