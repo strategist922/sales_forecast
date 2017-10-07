@@ -14,12 +14,10 @@ The products mainly include drug testing kits. Each product is a unique combinat
 
 In this publication, product codes are omitted for confidentiality.
 
-
-### The Model
+### Data and Model
 The available data include sales quantities of each product from Jan 2014 through May 2017. The last 5 months of records are reserved for model testing. Also, the data are pulled from QuickBooks Enterprise 2016, with time ("yyyy-mm") on column and product on row, which needs a transpose upon initiation.
 
 ![Data Snapshot](data/data_snapshot.png 'Data Snapshot')
-**
 
 After some exploratory data analyses (EDA), ARIMA is selected. It is the ideal algorithm for time series modeling and predicting. A simple stationarity check rules out new products because they typically have high order of difference. This portion of products are submitted for human determination.
 
