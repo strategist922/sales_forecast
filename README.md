@@ -19,11 +19,15 @@ In this publication, product codes are omitted for confidentiality.
 The available data include sales quantities of each product from Jan 2014 through May 2017. The last 5 months of records are reserved for model testing. Also, the data are pulled from QuickBooks Enterprise 2016, with time ("yyyy-mm") on column and product on row, which needs a transpose upon initiation.
 
 ![Data Snapshot](data/data_snapshot.png 'Data Snapshot')
+**
 
 After some exploratory data analyses (EDA), ARIMA is selected. It is the ideal algorithm for time series modeling and predicting. A simple stationarity check rules out new products because they typically have high order of difference. This portion of products are submitted for human determination.
 
+An example of current product:
+
 ![Current Products](eda_fig/demo_cur.png 'Current Products Maintain Good Records')
 
+An example of new product, notice its short history:
 ![New Products](eda_fig/demo_new.png 'Newly Marketed Products')
 
 After successfully fitted on the 36-month sales data, the model is tested using the sales data generated in the first 5 months of 2017. And finally, the model is used to predict sales for each existing (as opposed to new) products for the next 6 months and on a rolling basis (with modifications).
